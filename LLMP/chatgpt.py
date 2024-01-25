@@ -23,7 +23,7 @@ class ChatGPT:
         base64_image = base64.b64encode(png_bytes).decode('utf-8')
 
         # OpenAI API Key
-        api_key = "*"
+        api_key = "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"
 
         headers = {
             "Content-Type": "application/json",
