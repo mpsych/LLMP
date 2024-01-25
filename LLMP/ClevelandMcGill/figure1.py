@@ -4,6 +4,8 @@ import os
 import skimage.draw
 import sys
 
+from LLMP.util import Util
+
 class Figure1:
 
   DELTA_MIN = 20
@@ -226,6 +228,8 @@ class Figure1:
     image = np.zeros(Figure1.SIZE, dtype=bool)
 
     # draw direction
+    Y = int(Y)
+    X = int(X)
     rr, cc = skimage.draw.line(Y, X, int(np.round(END[0])), int(np.round(END[1])))
     image[rr, cc] = 1
 
@@ -333,7 +337,9 @@ class Figure1:
       parameters *= p
 
     image = np.zeros(Figure1.SIZE, dtype=bool)
-
+    
+    X = int(X)
+    Y = int(Y)
     rr, cc = skimage.draw.ellipse_perimeter(Y, X, RADIUS, RADIUS)
     image[rr, cc] = 1
 
@@ -399,8 +405,10 @@ class Figure1:
 
     img = np.zeros(Figure1.SIZE, dtype=bool)
 
+    Y = int(Y)
+    X = int(X)
     front_bottom_left = (Y, X)
-
+    
     front_bottom_right = (front_bottom_left[0], front_bottom_left[1]+DEPTH)
     rr, cc = skimage.draw.line(front_bottom_left[0], front_bottom_left[1], front_bottom_right[0], front_bottom_right[1])
     img[rr,cc] = 1

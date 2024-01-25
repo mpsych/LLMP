@@ -3,7 +3,7 @@ from .ClevelandMcGill import Figure3
 from .ClevelandMcGill import Figure4
 from .ClevelandMcGill import Figure12
 from .ClevelandMcGill import Weber
-
+from .util import Util
 
 class GPImage:
     @staticmethod
