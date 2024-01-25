@@ -505,9 +505,11 @@ class Figure1:
     mid = (DEPTH, X+WIDTH/2)
     end = (Y, X+WIDTH)
 
+    X = int(X)
+    Y = int(Y)
     img = np.zeros(Figure1.SIZE, dtype=bool)
 
-    rr, cc = skimage.draw.bezier_curve(start[0], start[1], mid[0], mid[1], end[0], end[1], 1)
+    rr, cc = skimage.draw.bezier_curve(int(start[0]), int(start[1]), int(mid[0]), int(mid[1]), int(end[0]),int(end[1]), 1)
     img[rr, cc] = 1
     t = 0.5
 
