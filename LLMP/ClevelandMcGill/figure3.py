@@ -184,4 +184,3 @@ class Figure3:
       random_direction -= current_angle
 
     return piechart
-
